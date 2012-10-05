@@ -3,7 +3,6 @@ package Jogo;
 import java.util.Scanner;
 import Jogo.Baralho;
 
-
 /**
  * Copyright (c) 2012
  * Anderson Fortes
