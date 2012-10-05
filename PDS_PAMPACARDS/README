@@ -5,6 +5,12 @@ Luiza Bagesteiro
 Ricardo Pasqualotti
 Vinicius Bittencourt
 
+Construção:
+
+Para a construção da biblioteca utilize o "Apache Ant".
+Comando para o terminal: ant
+
+
 Manual do jogo:
 
 Objetivo do jogo:
