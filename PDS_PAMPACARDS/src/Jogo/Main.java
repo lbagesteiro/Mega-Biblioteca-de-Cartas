@@ -49,8 +49,8 @@ public class Main {
     	
     	Scanner is = new Scanner(System.in);
     	
-    	System.out.println("Bem vindo ao PAMPACARDS. Jogo de cartas para dois jogadores.");
-        System.out.println("O objetivo do jogo e ficar com o menor numero de cartas no final.");
+    	System.out.println("Jogo de cartas para dois jogadores.");
+        System.out.println("O objetivo do jogo é ficar com o menor número de cartas no final.");
      
         baralho.imprimeBaralho(); //mostra baralho inicial
         
@@ -62,9 +62,9 @@ public class Main {
         
         baralho.imprimeMonte(); //imprime o monte de cartas de cada jogador
         
-        System.out.println("Jogadores, voces devem retirar uma carta do inicio ou do fim do seu monte para coloca-la no descarte, antes do jogo comecar."+"\n");
+        System.out.println("Jogadores, vocês devem retirar uma carta do início ou do fim do seu monte para colocá-la no descarte, antes do jogo começar."+"\n");
         
-        System.out.println(baralho.a.getNome()+", de qual local voce quer retirar a carta?  1 - INICIO		2 - FIM");
+        System.out.println(baralho.a.getNome()+", de qual local você quer retirar a carta?  1 - INICIO		2 - FIM");
         option = is.nextInt();
         if (option==1){
         	baralho.retiraCartaInicio(1);
@@ -73,11 +73,11 @@ public class Main {
         	baralho.retiraCartaFim(1);
         }  
         else {
-        	System.err.println("\nERRO. Você digitou um numero inválido.\n");
+        	System.err.println("\nERRO. Você digitou um número inválido.\n");
         	System.exit(1);
         }  
 
-        System.out.println(baralho.b.getNome()+", de qual local voce quer retirar a carta?  1 - INICIO		2 - FIM");
+        System.out.println(baralho.b.getNome()+", de qual local você quer retirar a carta?  1 - INICIO		2 - FIM");
         option = is.nextInt();
         if (option==1){
         	baralho.retiraCartaInicio(2);
@@ -86,7 +86,7 @@ public class Main {
         	baralho.retiraCartaFim(2);
         }  
         else {
-        	System.err.println("\nERRO. Voce digitou um numero inválido.\n");
+        	System.err.println("\nERRO. Você digitou um número inválido.\n");
         	System.exit(1);
         } 
         
@@ -98,7 +98,7 @@ public class Main {
         else if (option==2){       	
         }       
         else {
-        	System.err.println("\nERRO. Voce digitou um numero invalido.\n");
+        	System.err.println("\nERRO. Você digitou um número inválido.\n");
         	System.exit(1);
         }
         
@@ -110,7 +110,7 @@ public class Main {
         else if (option==2){        	
         }        
         else {
-        	System.err.println("\nERRO. Voce digitou um numero invalido.\n");
+        	System.err.println("\nERRO. Você digitou um número inválido.\n");
         	System.exit(1);
         }
         

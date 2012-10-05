@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>			
+<project name="Cria JAR para Mega Biblioteca de Cartas" default="create_run_jar" basedir=".">
+	<description>Constroi uma biblioteca de cartas e uma aplicação de exemplo.</description>
+
+
+<!-- Define algumas variáveis que serão utilizadas -->
+	<property name="src.dir" value="src/"/> <!-- Onde estão os fontes da aplicação -->
+	<property name="lib.dir" value="lib/"/>  <!-- Onde estão os fontes da Lib -->	
+	<property name="Aplicacao.build.dir" value="build/aplicacao"/> <!-- Onde será compilada a Aplicação -->
+	<property name="Lib.build.dir" value="build/lib"/> <!-- Onde será compilada a Lib -->
+	<property name="lib.dir" value="lib/"/>  <!-- Onde será gerada a lib -->
+
+	<path id="classpath"> <!-- inclui a biblioteca criada no classpath -->
+        	<fileset dir="${lib.dir}" includes="**/*.jar"/>
+	</path>
+
+
+<!-- Alvo que cria os diretorios -->	
+	<target name="init">
+		<mkdir dir="${Aplicacao.build.dir}"/>
+		<mkdir dir="${Lib.build.dir}"/>
+	</target>
+
+
+<!-- Compila as classes da biblioteca e salva os arquivos .class na pasta definida na variável Lib.build.dir-->
+	<target name="compileLib" depends="init" description="Compila a biblioteca">
+		<javac srcdir="${lib.dir}" destdir="${Lib.build.dir}">
+			<classpath>
+				<pathelement location="${Lib.build.dir}" />
+
+			</classpath>
+		</javac>
+	</target>
+
+
+<!-- Compila as classes da aplicação de exemplo e salva os arquivos .class na pasta definida na variável Aplicacao.build.dir-->
+	<target name="compileApp" depends="geraLib" description="Compila a aplicacao">
+		<javac srcdir="${src.dir}" destdir="${Aplicacao.build.dir}" classpathref="classpath"> <!-- usa o classpath com a lib já construida -->
+			<classpath>
+				<pathelement location="${Aplicacao.build.dir}" />
+                        
+			</classpath>
+		</javac>
+	</target>
+
+
+<!-- Alvo padrão, pra gerar um arquivo .jar-->
+	<target name="geraLib" depends="compileLib" description="Gera Biblioteca do Baralho">
+		<jar destfile="${lib.dir}/libBaralho.jar">
+       			<fileset dir="${Lib.build.dir}"/>
+		</jar>
+	</target>	
+
+<!-- Constroi uma aplicação de exemplo. -->
+	<target name="create_run_jar" depends="compileApp" description="Gera aplicação">
+
+		<jar destfile="Aplicacao.jar">
+                   <manifest>
+			<attribute name="Class-Path" value="lib/libBaralho.jar"/>
+			<attribute name="Main-Class" value="Jogo.Main"/>              		
+                   </manifest> 
+			<fileset dir="${Aplicacao.build.dir}"/>
+		</jar>
+	</target>	
+
+</project>

@@ -15,23 +15,23 @@ import junit.framework.TestCase;
  * Ricardo Pasqualotti
  * Vinicius Bittencourt
  * 
- * Este arquivo é parte do programa Jogo
+ * Este arquivo e parte do programa Jogo
  * 
- * Jogo é um software livre; você pode redistribui-lo e/ou modifica-lo dentro dos termos da Licença Pública Geral Menor GNU 
- * como publicada pela Fundação do Software Livre (FSF); na versão 2 da Licença, ou (na sua opinião) qualquer versão.
+ * Jogo e um software livre; voce pode redistribui-lo e/ou modifica-lo dentro dos termos da Licenca Publica Geral Menor GNU 
+ * como publicada pela Fundacao do Software Livre (FSF); na versao 2 da Licenca, ou (na sua opiniao) qualquer versao.
  * 
- *  Este programa é distribuido na esperança que possa ser  util, mas SEM NENHUMA GARANTIA; sem uma garantia implicita de ADEQUAÇÂO a qualquer
- *  MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a Licença Pública Geral Menor GNU para maiores detalhes.
+ *  Este programa e distribuido na esperanca que possa ser util, mas SEM NENHUMA GARANTIA; sem uma garantia implicita de ADEQUACAO a qualquer
+ *  MERCADO ou APLICACAO EM PARTICULAR. Veja a Licenca Publica Geral Menor GNU para maiores detalhes.
  *  
- *  Você deve ter recebido uma cópia da Licença Pública Geral Menor GNU junto com este programa, se não, escreva para a Fundação do Software
+ *  Voce deve ter recebido uma copia da Licenca Publica Geral Menor GNU junto com este programa, se nao, escreva para a Fundacao do Software
  *  Livre(FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  * 
  */
 
 
-//Como não havia métodos com retorno para a utilização de parâmetros de
-//comparação para a realização de testes foram testados apenas alguns
-//elementos que compõe os métodos.
+//Como não havia metodos com retorno para a utilizacao de parametros de
+//comparacao para a realizacao de testes foram testados apenas alguns
+//elementos que compoem os metodos.
 
 
 public class TestesBaralho extends TestCase {
@@ -54,7 +54,7 @@ public class TestesBaralho extends TestCase {
 				baralho.add(new Cartas(i-38, "Paus"));
 			}				
 		}
-	Assert.assertNotNull(baralho); //Testa se o baralho não é nulo
+	Assert.assertNotNull(baralho); //Testa se o baralho não e nulo
 
 	}
 	@Test
@@ -62,7 +62,7 @@ public class TestesBaralho extends TestCase {
 		ArrayList<Cartas> baralho = new ArrayList<Cartas>(52);
 		Collections.shuffle(baralho);
         System.out.println("Embaralhado.");
-        Assert.assertNotNull(baralho); //Testa se o baralho não é nulo após ordenar
+        Assert.assertNotNull(baralho); //Testa se o baralho não e nulo apos ordenar
    }
     
 	
@@ -77,10 +77,7 @@ public class TestesBaralho extends TestCase {
 		for(int i=0; i<posicao; i++){
 			temporario2.add(baralho.get(i));
 		}
-		Assert.assertEquals(temporario.size(), temporario2.size());	//Verifica se os dois temporarios possuem o mesmo tamanho, se possuem foi dividido igualmente	
-		//criaJogadores(temporario,temporario2);	        
+		Assert.assertEquals(temporario.size(), temporario2.size());	//Verifica se os dois temporarios possuem o mesmo tamanho, se possuem foi dividido igualmente		        
 	}
 	
 }
-	
-

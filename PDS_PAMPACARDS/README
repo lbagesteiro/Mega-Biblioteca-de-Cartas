@@ -1,0 +1,45 @@
+Anderson Fortes
+Francis Diego Almeida
+Jader Saldanha
+Luiza Bagesteiro
+Ricardo Pasqualotti
+Vinicius Bittencourt
+
+Manual do jogo:
+
+Objetivo do jogo:
+- O objetivo do jogo é obter o menor número de cartas no final.
+- Para isso, os jogadores devem comparar os números de suas cartas.
+- O jogador que tiver a carta de menor valor levará para seu monte todas as cartas da mesa, que são: carta do jogador 1, carta do jogador 2, e as cartas do monte de
+descarte.
+- O monte de descarte é formado quando os números das cartas comparadas pelos jogadores são iguais. Dessa forma, as duas cartas vão para o monte de descarte, e só serão retiradas de lá quando um jogador perde a rodada, levando as cartas para si.
+
+Como jogar:
+- Primeiramente, cada jogador digita seu nome;
+- Um monte contendo 26 cartas é dado a cada jogador;
+- No início do jogo, cada jogador deve retirar uma carta do baralho para colocá-la no descarte. O jogador decide, então, se quer retirar a carta do topo ou do fim do baralho.
+- Ainda antes do início do jogo, o jogador pode escolher se gostaria de passar a carta do topo do seu baralho para o fim dele.
+- São realizadas 25 comparações de cartas, verificando o número da carta de cada jogador. As cartas acumuladas por cada jogador ficam no monte acumulado de cada jogador.
+- Ao final das 25 comparações, verifica-se o número de cartas acumuladas de cada jogador e o resultado é dado. Ganha quem tiver o menor número de cartas em seu monte acumulado.
+
+Comportamento do jogo:
+- Jogo implementado em Java;
+- O jogo de cartas foi feito para dois jogadores;
+- O jogo mostra, inicialmente, um baralho de 52 cartas organizado;
+- O baralho é embaralhado e é mostrado o resultado do embaralhamento;
+- Após, o baralho é dividido na metade;
+- Os jogadores se identificam, digitando seu nome;
+
+- Cada metade do baralho (26 cartas) é dada para cada jogador. Essas cartas são o monte inicial de cada jogador;
+- As cartas de cada jogador são mostradas na tela;
+- Os jogadores decidem qual carta eles querem retirar do seu monte inicial. As opções são: retirar a carta do topo do baralho, ou do fim do baralho;
+- As cartas retiradas são movidas para o monte de descarte;
+- Os jogadores decidem se desejam mover a carta do topo do seu monte inicial para o fim do monte;
+- O jogo começa. Durante 25 iterações, as comparações são realizadas da seguinte forma:
+- - - Jogador 1 joga a carta da posição i do seu baralho inicial;
+- - - Jogador 2 joga a carta da posição i do seu baralho inicial;
+- - - O jogador que tiver o número da carta menor vai levar a sua carta, a carta do jogador oponente, e as cartas que estão no monte de descarte. Essas cartas vão para o monte acumulado do jogador;
+- - - i = i+1;
+- Ao final das iterações é mostrado o monte acumulado de cada jogador;
+- O número de cartas do monte acumulado de cada jogador é contado;
+- O vencedor do jogo é o jogador que obtiver o menor número de cartas no final.

@@ -276,17 +276,9 @@ public class Baralho {
 		   */
 		  public void moveCartaParaOFim(int i){
 			  
-			  if (i==1){
-				  a.monte.add(a.monte.remove(0));
-				  System.out.println("A carta foi movida para o fim."+"\n");
-			  }
-			  
-			  else {
-				  b.monte.add(b.monte.remove(0));
-				  System.out.println("A carta foi movida para o fim."+"\n");
-			  }
+			  baralho.add(baralho.remove(0));
+			  System.out.println("A carta foi movida para o fim.");
 		  }		  
-	  
 
 
 		  /**
