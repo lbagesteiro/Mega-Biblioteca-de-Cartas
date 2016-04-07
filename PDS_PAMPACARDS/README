@@ -15,7 +15,7 @@ Manual do jogo:
 
 Objetivo do jogo:
 - O objetivo do jogo é obter o menor número de cartas no final.
-- Para isso, os jogadores devem comparar os números de suas cartas.
+- Para isso, os jogadores devem comparar os números de suas cartas ao final de todas as rodadas.
 - O jogador que tiver a carta de menor valor levará para seu monte todas as cartas da mesa, que são: carta do jogador 1, carta do jogador 2, e as cartas do monte de
 descarte.
 - O monte de descarte é formado quando os números das cartas comparadas pelos jogadores são iguais. Dessa forma, as duas cartas vão para o monte de descarte, e só serão retiradas de lá quando um jogador perde a rodada, levando as cartas para si.
